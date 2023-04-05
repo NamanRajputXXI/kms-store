@@ -17,67 +17,82 @@ function mSet_table1(mE) {
         mTxt.innerHTML = txt;
         return mTxt;
       },
+      img1: (img) => {
+        var mImg = document.createElement("img");
+        mImg.src = img;
+        return mImg;
+      },
+      svg1: (svg) => {
+        var mSvg = document.createElement("img");
+        mSvg.src = svg;
+        return mSvg;
+      },
+      a1: (link) => {
+        var mLink = document.createElement("a");
+        mLink.href = link;
+        return mLink;
+      },
     },
     l: [
       {
-        0: "Recipe ID",
-        key: "RecipeID",
+        0: "Images",
+        key: "ImageId",
+        col: (src, mE) => {
+          mE.appendChild(mRndr["utils"]["img1"](src));
+        },
+      },
+      {
+        0: "Item Code",
+        key: "ItemCode",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
-        0: "Recipe Name",
-        key: "RecipeName",
+        0: "Item Name",
+        key: "ItemName",
+        col: (link, mE) => {
+          mE.appendChild(mRndr["utils"]["a1"](link));
+        },
+      },
+      {
+        0: "Item Category",
+        key: "ItemCategory",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
-        0: "Recipe Type",
-        key: "RecipeType",
-        col: (data, mE) => {
-          mE.appendChild(mRndr["utils"]["txt1"](data));
-        },
-      },
-      {
-        0: "Min Yield",
-        key: "MinYield",
-        col: (data, mE) => {
-          mE.appendChild(mRndr["utils"]["txt1"](data));
-        },
-      },
-      {
-        0: "Max Yield",
-        key: "MaxYield",
-        col: (data, mE) => {
-          mE.appendChild(mRndr["utils"]["txt1"](data));
-        },
-      },
-      {
-        0: "Price/Unit",
+        0: "Current Stock",
         key: "PriceUnit",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
-        0: "Serving",
-        key: "Serving",
+        0: "Item Price (Rs.)",
+        key: "ItemPrice",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
-        0: "Created By",
-        key: "CreatedBy",
+        0: "Selling Price (Price/Unit)",
+        key: "SellingPrice",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
-        0: "Created On",
-        key: "CreatedOn",
+        0: "MINIMUM STOCK",
+        key: "MinimumStock",
+        col: (data, mE) => {
+          mE.appendChild(mRndr["utils"]["txt1"](data));
+        },
+      },
+      {
+        0: "EXPIRY",
+        key: "Expiry",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
@@ -89,49 +104,47 @@ function mSet_table1(mE) {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
+      {
+        0: "Menu",
+        key: "Menu",
+        col: (svg, mE) => {
+          mE.appendChild(mRndr["utils"]["svg1"](svg));
+        },
+      },
     ],
   };
 
   //head..
-  function mHead1(mE, mhead_ARR = [], w) {
+  function mHead1(mE, mhead_ARR, w) {
     var mHead = document.createElement("div");
     mHead.style.backgroundColor = "rgba(0,32,96, 1)";
     mHead.style.width = "100%";
-    mHead.style.height = "3.5vh";
+    mHead.style.height = "5.5vh";
     mHead.style.display = "flex";
     mHead.style.alignItems = "center";
+    mHead.style.justifyContent = "center";
     mE.appendChild(mHead);
-
-    //Space.....
-    core_1mn["space"].set({
-      w: "0.5vw",
-      e1: mHead,
-    });
 
     //txt 1
     function mSet_txt1(mCurr_I1) {
       var mTxt = document.createElement("div");
       mTxt.style.fontSize = "1.3vh";
       mTxt.style.color = "rgba(255,255,255, 1)";
-      mTxt.innerHTML = mCurr_I1["0"];
+      mTxt.innerText = mCurr_I1["0"];
       mTxt.style.width = mCurr_I1["1"] != undefined ? mCurr_I1["1"] : w;
+      mTxt.style.textAlign = "center";
       mHead.appendChild(mTxt);
     }
 
     //data..
     //gen..
+    console.log(mhead_ARR);
     for (let i1 = 0; i1 < mhead_ARR.length; i1++) {
       const mCurr_I1 = mhead_ARR[i1];
       mSet_txt1(mCurr_I1);
     }
   }
-  mHead1(mTbl_div, mRndr["l"], "8vw");
-
-  //Space.....
-  core_1mn["space"].set({
-    h: "1vh",
-    e1: mTbl_div,
-  });
+  mHead1(mTbl_div, mRndr.l, "10vw");
 
   //btns..
   function mSet_btns_1(mE) {
@@ -140,33 +153,33 @@ function mSet_table1(mE) {
     mBtnList.style.alignItems = "center";
     mE.appendChild(mBtnList);
 
-    function mSet_btn1() {
-      //Btn.....
-      var mBtnHolder = document.createElement("div");
-      mBtnList.appendChild(mBtnHolder);
-      var mBtn = core_1mn["btn"]["1"].set({
-        e1: mBtnHolder,
-        w: "3vw",
-        posH: 1,
-        h: "3.2vh",
-        txt: {
-          0: "",
-          1: "1.5vh",
-        },
-        ico: {
-          0: "three_dots_0.svg",
-          1: "2.1vh",
-          2: "2.1vh",
-          //"3": "rgba(255,255,255, 1.0)"
-        },
-        cb: {
-          onClick: function (data) {},
-        },
-        typ: 1,
-        vari: 2,
-      });
-    }
-    mSet_btn1();
+    /*function mSet_btn1() {
+              //Btn.....  
+              var mBtnHolder = document.createElement("div"); 
+              mBtnList.appendChild(mBtnHolder);
+              var mBtn = core_1mn['btn']['1'].set({ 
+                       "e1": mBtnHolder,
+                       "w": "3vw",
+                       "posH": 1,
+                       "h": "3.2vh",
+                       "txt": {
+                         "0": "",
+                         "1": "1.5vh"
+                        },
+                        "ico": {"0": "three_dots_0.svg", "1": "2.1vh", "2": "2.1vh", 
+                        //"3": "rgba(255,255,255, 1.0)"
+                        },
+                       "cb": {
+                           "onClick": function(data){
+                              
+                        },
+                       },
+                       "typ": 1,
+                       "vari": 2
+              });
+  
+          }
+          mSet_btn1();*/
   }
 
   //row..
@@ -181,25 +194,12 @@ function mSet_table1(mE) {
   }
   function mAddRow1(mCurr_I1) {
     var mRow = document.createElement("div");
-    mRow.id = core_1mn["mUniqueId"].mGenerate(11);
+    // mRow.id = core_1mn["mUniqueId"].mGenerate(11);
     mRow.style.display = "flex";
     mRow.style.alignItems = "center";
     mRow.style.margin = "0.5vh 0";
     mTbl_div.appendChild(mRow);
-    //Space.....
-    core_1mn["space"].set({
-      w: "0.5vw",
-      e1: mRow,
-    });
-    //add row..
     mRow1(mRow, mCurr_I1);
-    //Space.....
-    core_1mn["space"].set({
-      w: "1vw",
-      e1: mRow,
-    });
-    //add btns..
-    mSet_btns_1(mRow);
   }
 
   //get row data and set..
@@ -230,42 +230,3 @@ function mSet_table1(mE) {
   mGetRowDataAndSet();
 }
 mSet_table1(add_any_element_for_append);
-
-// function Counter() {
-//   let count = 0;
-
-//   const increment = () => {
-//     count++;
-//     render();
-//   };
-
-//   const decrement = () => {
-//     count--;
-//     render();
-//   };
-
-//   const render = () => {
-//     const container = document.createElement("div");
-//     const countText = document.createTextNode(`Count: ${count}`);
-//     container.appendChild(countText);
-
-//     const incrementButton = document.createElement("button");
-//     incrementButton.textContent = "Increment";
-//     incrementButton.addEventListener("click", increment);
-//     container.appendChild(incrementButton);
-
-//     const decrementButton = document.createElement("button");
-//     decrementButton.textContent = "Decrement";
-//     decrementButton.addEventListener("click", decrement);
-//     container.appendChild(decrementButton);
-
-//     const counterDiv = document.getElementById("counter");
-//     counterDiv.innerHTML = "";
-//     counterDiv.appendChild(container);
-//   };
-
-//   return { render };
-// }
-
-// const counter = Counter();
-// counter.render();
