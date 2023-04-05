@@ -140,33 +140,33 @@ function mSet_table1(mE) {
     mBtnList.style.alignItems = "center";
     mE.appendChild(mBtnList);
 
-    /*function mSet_btn1() {
-            //Btn.....  
-            var mBtnHolder = document.createElement("div"); 
-            mBtnList.appendChild(mBtnHolder);
-            var mBtn = core_1mn['btn']['1'].set({ 
-                     "e1": mBtnHolder,
-                     "w": "3vw",
-                     "posH": 1,
-                     "h": "3.2vh",
-                     "txt": {
-                       "0": "",
-                       "1": "1.5vh"
-                      },
-                      "ico": {"0": "three_dots_0.svg", "1": "2.1vh", "2": "2.1vh", 
-                      //"3": "rgba(255,255,255, 1.0)"
-                      },
-                     "cb": {
-                         "onClick": function(data){
-                            
-                      },
-                     },
-                     "typ": 1,
-                     "vari": 2
-            });
-
-        }
-        mSet_btn1();*/
+    function mSet_btn1() {
+      //Btn.....
+      var mBtnHolder = document.createElement("div");
+      mBtnList.appendChild(mBtnHolder);
+      var mBtn = core_1mn["btn"]["1"].set({
+        e1: mBtnHolder,
+        w: "3vw",
+        posH: 1,
+        h: "3.2vh",
+        txt: {
+          0: "",
+          1: "1.5vh",
+        },
+        ico: {
+          0: "three_dots_0.svg",
+          1: "2.1vh",
+          2: "2.1vh",
+          //"3": "rgba(255,255,255, 1.0)"
+        },
+        cb: {
+          onClick: function (data) {},
+        },
+        typ: 1,
+        vari: 2,
+      });
+    }
+    mSet_btn1();
   }
 
   //row..
@@ -230,3 +230,42 @@ function mSet_table1(mE) {
   mGetRowDataAndSet();
 }
 mSet_table1(add_any_element_for_append);
+
+// function Counter() {
+//   let count = 0;
+
+//   const increment = () => {
+//     count++;
+//     render();
+//   };
+
+//   const decrement = () => {
+//     count--;
+//     render();
+//   };
+
+//   const render = () => {
+//     const container = document.createElement("div");
+//     const countText = document.createTextNode(`Count: ${count}`);
+//     container.appendChild(countText);
+
+//     const incrementButton = document.createElement("button");
+//     incrementButton.textContent = "Increment";
+//     incrementButton.addEventListener("click", increment);
+//     container.appendChild(incrementButton);
+
+//     const decrementButton = document.createElement("button");
+//     decrementButton.textContent = "Decrement";
+//     decrementButton.addEventListener("click", decrement);
+//     container.appendChild(decrementButton);
+
+//     const counterDiv = document.getElementById("counter");
+//     counterDiv.innerHTML = "";
+//     counterDiv.appendChild(container);
+//   };
+
+//   return { render };
+// }
+
+// const counter = Counter();
+// counter.render();
