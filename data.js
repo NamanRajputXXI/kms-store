@@ -12,7 +12,8 @@ const data = [
     status: "STATUS",
   },
   {
-    image: "Image1",
+    image:
+      "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
     item_code: "WS0005",
     item_name: "PANNER",
     item_category: "WHITE",
@@ -24,7 +25,8 @@ const data = [
     status: "ACTIVE",
   },
   {
-    image: "Image2",
+    image:
+      "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
     item_code: "CTF001",
     item_name: "CATTLE FEED 1",
     item_category: "CATTLE FEED",
@@ -36,7 +38,8 @@ const data = [
     status: "ACTIVE",
   },
   {
-    image: "Image3",
+    image:
+      "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
     item_code: "AS08893 ",
     item_name: "LPG CYLINDER",
     item_category: "ASSET",
@@ -48,7 +51,8 @@ const data = [
     status: "ACTIVE",
   },
   {
-    image: "Image4",
+    image:
+      "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
     item_code: "WS0005",
     item_name: "CARROT",
     item_category: "GREEN",
@@ -60,7 +64,8 @@ const data = [
     status: "ACTIVE",
   },
   {
-    image: "Image5",
+    image:
+      "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
     item_code: "GS00052 ",
     item_name: "BASMATI RIC",
     item_category: "BROWN",
@@ -72,7 +77,8 @@ const data = [
     status: "ACTIVE",
   },
   {
-    image: "Image6",
+    image:
+      "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
     item_code: "BS56123 ",
     item_name: "PANNER",
     item_category: "WHITE",
@@ -84,7 +90,8 @@ const data = [
     status: "ACTIVE",
   },
   {
-    image: "Image7",
+    image:
+      "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
     item_code: "WS0005",
     item_name: "CATTLE FEED 1",
     item_category: "CATTLE FEED",
@@ -96,7 +103,8 @@ const data = [
     status: "ACTIVE",
   },
   {
-    image: "Image7",
+    image:
+      "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
     item_code: "WS0005",
     item_name: "CATTLE FEED 1",
     item_category: "CATTLE FEED",
