@@ -3,7 +3,6 @@ function mSet_table1(mE) {
   var mTbl_div = document.createElement("div");
   mTbl_div.style.width = "100%";
   mTbl_div.style.height = "100%";
-  //mTbl_div.style.backgroundColor = "red";
   mE.appendChild(mTbl_div);
 
   //rndr..
@@ -12,7 +11,7 @@ function mSet_table1(mE) {
       txt1: (txt) => {
         var mTxt = document.createElement("div");
         mTxt.style.fontSize = "1.5vh";
-        mTxt.style.width = "8vw";
+        mTxt.style.width = "4vw";
         mTxt.style.color = "rgba(34,34,34, 1)";
         mTxt.innerHTML = txt;
         return mTxt;
@@ -20,93 +19,104 @@ function mSet_table1(mE) {
       img1: (img) => {
         var mImg = document.createElement("img");
         mImg.src = img;
+        mImg.style.width = "5vw";
+        mImg.style.marginLeft = "3vw"
         return mImg;
       },
       svg1: (svg) => {
         var mSvg = document.createElement("img");
         mSvg.src = svg;
+        mSvg.style.width = "2vw";
         return mSvg;
       },
       a1: (link) => {
-        var mLink = document.createElement("a");
-        mLink.href = link;
+        var mLink = document.createElement("div");
+        mLink.innerHTML = link;
+        mLink.style.fontSize = "1.5vh";
+        mLink.style.width = "6vw";
+        mLink.style.color = "rgba(14,80,235, 1)";
+        mLink.style.textDecoration = "underline"
+        mLink.style.cursor = "pointer"
+        mLink.addEventListener(onclick,()=>{
+          // console.log("clicked")
+        })
         return mLink;
       },
     },
     l: [
       {
         0: "Images",
-        key: "ImageId",
+        key: "image",
         col: (src, mE) => {
           mE.appendChild(mRndr["utils"]["img1"](src));
         },
       },
       {
         0: "Item Code",
-        key: "ItemCode",
+        key: "item_code",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
         0: "Item Name",
-        key: "ItemName",
+        key: "item_name",
         col: (link, mE) => {
           mE.appendChild(mRndr["utils"]["a1"](link));
         },
       },
       {
         0: "Item Category",
-        key: "ItemCategory",
+        key: "item_category",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
         0: "Current Stock",
-        key: "PriceUnit",
+        key: "current_stock",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
         0: "Item Price (Rs.)",
-        key: "ItemPrice",
+        key: "item_price",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
         0: "Selling Price (Price/Unit)",
-        key: "SellingPrice",
+        key: "selling_price",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
         0: "MINIMUM STOCK",
-        key: "MinimumStock",
+        key: "minimum_stock",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
         0: "EXPIRY",
-        key: "Expiry",
+        key: "expiry",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
         0: "Status",
-        key: "Status",
+        key: "status",
         col: (data, mE) => {
           mE.appendChild(mRndr["utils"]["txt1"](data));
         },
       },
       {
-        0: "Menu",
-        key: "Menu",
+        0: "",
+        key: "menu",
         col: (svg, mE) => {
           mE.appendChild(mRndr["utils"]["svg1"](svg));
         },
@@ -117,22 +127,23 @@ function mSet_table1(mE) {
   //head..
   function mHead1(mE, mhead_ARR, w) {
     var mHead = document.createElement("div");
-    mHead.style.backgroundColor = "rgba(0,32,96, 1)";
+    mHead.style.backgroundColor = "rgba(167,210,240, 1)";
     mHead.style.width = "100%";
     mHead.style.height = "5.5vh";
     mHead.style.display = "flex";
     mHead.style.alignItems = "center";
-    mHead.style.justifyContent = "center";
+    mHead.style.justifyContent = "space-between";
     mE.appendChild(mHead);
 
     //txt 1
     function mSet_txt1(mCurr_I1) {
       var mTxt = document.createElement("div");
       mTxt.style.fontSize = "1.3vh";
-      mTxt.style.color = "rgba(255,255,255, 1)";
+      mTxt.style.color = "rgba(0,0,0, 1)";
       mTxt.innerText = mCurr_I1["0"];
       mTxt.style.width = mCurr_I1["1"] != undefined ? mCurr_I1["1"] : w;
       mTxt.style.textAlign = "center";
+      mTxt.style.marginLeft = "4vw"
       mHead.appendChild(mTxt);
     }
 
@@ -146,42 +157,6 @@ function mSet_table1(mE) {
   }
   mHead1(mTbl_div, mRndr.l, "10vw");
 
-  //btns..
-  function mSet_btns_1(mE) {
-    var mBtnList = document.createElement("div");
-    mBtnList.style.display = "flex";
-    mBtnList.style.alignItems = "center";
-    mE.appendChild(mBtnList);
-
-    /*function mSet_btn1() {
-              //Btn.....  
-              var mBtnHolder = document.createElement("div"); 
-              mBtnList.appendChild(mBtnHolder);
-              var mBtn = core_1mn['btn']['1'].set({ 
-                       "e1": mBtnHolder,
-                       "w": "3vw",
-                       "posH": 1,
-                       "h": "3.2vh",
-                       "txt": {
-                         "0": "",
-                         "1": "1.5vh"
-                        },
-                        "ico": {"0": "three_dots_0.svg", "1": "2.1vh", "2": "2.1vh", 
-                        //"3": "rgba(255,255,255, 1.0)"
-                        },
-                       "cb": {
-                           "onClick": function(data){
-                              
-                        },
-                       },
-                       "typ": 1,
-                       "vari": 2
-              });
-  
-          }
-          mSet_btn1();*/
-  }
-
   //row..
   function mRow1(mRow, mData) {
     for (let i1 = 0; i1 < mRndr["l"].length; i1++) {
@@ -194,9 +169,9 @@ function mSet_table1(mE) {
   }
   function mAddRow1(mCurr_I1) {
     var mRow = document.createElement("div");
-    // mRow.id = core_1mn["mUniqueId"].mGenerate(11);
     mRow.style.display = "flex";
     mRow.style.alignItems = "center";
+    mRow.style.justifyContent = "space-between";
     mRow.style.margin = "0.5vh 0";
     mTbl_div.appendChild(mRow);
     mRow1(mRow, mCurr_I1);
@@ -206,19 +181,118 @@ function mSet_table1(mE) {
   function mGetRowDataAndSet() {
     const data = [
       {
-        RecipeID: "00001",
-        RecipeName: "Dosa",
-        RecipeType: "General",
-        MinYield: "100 Pcs",
-        MaxYield: "500 Pcs",
-        PriceUnit: "7/Pc",
-        Serving: "1 Pc",
-        CreatedBy: "Admin",
-        CreatedOn: "23/02/2023",
-        Status: "Active",
-        tag1: "my_tag_1",
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "PANNER",
+        item_category: "WHITE",
+        current_stock: "90 kg",
+        item_price: "3916.83",
+        selling_price: "32.00/kg",
+        minimum_stock: "200 kgs",
+        expiry: "15/03/2023",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
       },
-    ];
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "CTF001",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "12.13/KG",
+        minimum_stock: "50 kgs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "AS08893 ",
+        item_name: "LPG CYLINDER",
+        item_category: "ASSET",
+        current_stock: "7 pcs",
+        item_price: "5019.74",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CARROT",
+        item_category: "GREEN",
+        current_stock: "20 kg",
+        item_price: "1896.40",
+        selling_price: "15.11/kg",
+        minimum_stock: "200 kgs",
+        expiry: "15/03/2023",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "GS00052 ",
+        item_name: "BASMATI RIC",
+        item_category: "BROWN",
+        current_stock: "400 kg",
+        item_price: "15228.09",
+        selling_price: "32.00/kg",
+        minimum_stock: "50 kgs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "BS56123 ",
+        item_name: "PANNER",
+        item_category: "WHITE",
+        current_stock: "90 kg",
+        item_price: "3916.83",
+        selling_price: "12.13/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.5",
+        selling_price: "18.46/kg",
+        minimum_stock: "50 kgs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+      },
+    ];    
 
     //console.log(data);
     //gen..
