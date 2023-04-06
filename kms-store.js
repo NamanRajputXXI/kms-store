@@ -19,8 +19,8 @@ function mSet_table1(mE) {
       img1: (img) => {
         var mImg = document.createElement("img");
         mImg.src = img;
-        mImg.style.width = "5vw";
-        mImg.style.marginLeft = "3vw"
+        mImg.style.width = "4vw";
+        mImg.style.marginLeft = "3vw";
         return mImg;
       },
       svg1: (svg) => {
@@ -35,11 +35,11 @@ function mSet_table1(mE) {
         mLink.style.fontSize = "1.5vh";
         mLink.style.width = "6vw";
         mLink.style.color = "rgba(14,80,235, 1)";
-        mLink.style.textDecoration = "underline"
-        mLink.style.cursor = "pointer"
-        mLink.addEventListener(onclick,()=>{
+        mLink.style.textDecoration = "underline";
+        mLink.style.cursor = "pointer";
+        mLink.addEventListener(onclick, () => {
           // console.log("clicked")
-        })
+        });
         return mLink;
       },
     },
@@ -133,6 +133,9 @@ function mSet_table1(mE) {
     mHead.style.display = "flex";
     mHead.style.alignItems = "center";
     mHead.style.justifyContent = "space-between";
+    mHead.style.position = "fixed";
+    mHead.style.top = "0px";
+    mHead.style.marginBottom = "100px";
     mE.appendChild(mHead);
 
     //txt 1
@@ -143,7 +146,7 @@ function mSet_table1(mE) {
       mTxt.innerText = mCurr_I1["0"];
       mTxt.style.width = mCurr_I1["1"] != undefined ? mCurr_I1["1"] : w;
       mTxt.style.textAlign = "center";
-      mTxt.style.marginLeft = "4vw"
+      mTxt.style.marginLeft = "4vw";
       mHead.appendChild(mTxt);
     }
 
@@ -172,7 +175,7 @@ function mSet_table1(mE) {
     mRow.style.display = "flex";
     mRow.style.alignItems = "center";
     mRow.style.justifyContent = "space-between";
-    mRow.style.margin = "0.5vh 0";
+    mRow.style.margin = "6vh 0 0 0";
     mTbl_div.appendChild(mRow);
     mRow1(mRow, mCurr_I1);
   }
@@ -192,7 +195,7 @@ function mSet_table1(mE) {
         minimum_stock: "200 kgs",
         expiry: "15/03/2023",
         status: "ACTIVE",
-        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
       },
       {
         image:
@@ -206,7 +209,7 @@ function mSet_table1(mE) {
         minimum_stock: "50 kgs",
         expiry: "NO EXPIRY",
         status: "ACTIVE",
-        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
       },
       {
         image:
@@ -220,7 +223,7 @@ function mSet_table1(mE) {
         minimum_stock: "4 pcs",
         expiry: "NO EXPIRY",
         status: "ACTIVE",
-        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
       },
       {
         image:
@@ -234,7 +237,7 @@ function mSet_table1(mE) {
         minimum_stock: "200 kgs",
         expiry: "15/03/2023",
         status: "ACTIVE",
-        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
       },
       {
         image:
@@ -248,7 +251,7 @@ function mSet_table1(mE) {
         minimum_stock: "50 kgs",
         expiry: "NO EXPIRY",
         status: "ACTIVE",
-        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
       },
       {
         image:
@@ -262,7 +265,7 @@ function mSet_table1(mE) {
         minimum_stock: "4 pcs",
         expiry: "NO EXPIRY",
         status: "ACTIVE",
-        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
       },
       {
         image:
@@ -276,7 +279,7 @@ function mSet_table1(mE) {
         minimum_stock: "50 kgs",
         expiry: "NO EXPIRY",
         status: "ACTIVE",
-        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
       },
       {
         image:
@@ -290,9 +293,681 @@ function mSet_table1(mE) {
         minimum_stock: "4 pcs",
         expiry: "NO EXPIRY",
         status: "ACTIVE",
-        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png"
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
       },
-    ];    
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+      {
+        image:
+          "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg",
+        item_code: "WS0005",
+        item_name: "CATTLE FEED 1",
+        item_category: "CATTLE FEED",
+        current_stock: "12 kg",
+        item_price: "712.56",
+        selling_price: "18.46/kg",
+        minimum_stock: "4 pcs",
+        expiry: "NO EXPIRY",
+        status: "ACTIVE",
+        menu: "https://w7.pngwing.com/pngs/351/97/png-transparent-three-dots-arrows-and-universal-actions-icon-thumbnail.png",
+      },
+    ];
 
     //console.log(data);
     //gen..
