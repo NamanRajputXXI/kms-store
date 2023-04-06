@@ -11,7 +11,8 @@ function mSet_table1(mE) {
       txt1: (txt) => {
         var mTxt = document.createElement("div");
         mTxt.style.fontSize = "1.5vh";
-        mTxt.style.width = "4vw";
+        mTxt.style.width = "12vw";
+        mTxt.style.textAlign = "center";
         mTxt.style.color = "rgba(34,34,34, 1)";
         mTxt.innerHTML = txt;
         return mTxt;
@@ -20,20 +21,21 @@ function mSet_table1(mE) {
         var mImg = document.createElement("img");
         mImg.src = img;
         mImg.style.width = "4vw";
-        mImg.style.marginLeft = "3vw";
+        mImg.style.margin = "0 4vw";
         return mImg;
       },
       svg1: (svg) => {
         var mSvg = document.createElement("img");
         mSvg.src = svg;
-        mSvg.style.width = "2vw";
+        mSvg.style.width = "4vw";
         return mSvg;
       },
       a1: (link) => {
         var mLink = document.createElement("div");
         mLink.innerHTML = link;
         mLink.style.fontSize = "1.5vh";
-        mLink.style.width = "6vw";
+        mLink.style.width = "12vw";
+        mLink.style.textAlign = "center";
         mLink.style.color = "rgba(14,80,235, 1)";
         mLink.style.textDecoration = "underline";
         mLink.style.cursor = "pointer";
@@ -128,14 +130,15 @@ function mSet_table1(mE) {
   function mHead1(mE, mhead_ARR, w) {
     var mHead = document.createElement("div");
     mHead.style.backgroundColor = "rgba(167,210,240, 1)";
-    mHead.style.width = "100%";
+    mHead.style.width = "125%";
     mHead.style.height = "5.5vh";
     mHead.style.display = "flex";
     mHead.style.alignItems = "center";
-    mHead.style.justifyContent = "space-between";
-    mHead.style.position = "fixed";
+    mHead.style.justifyContent = "center";
+    mHead.style.position = "sticky";
+    mHead.style.paddingLeft = "2vh";
     mHead.style.top = "0px";
-    mHead.style.marginBottom = "100px";
+    // mHead.style.marginBottom = "100px";
     mE.appendChild(mHead);
 
     //txt 1
@@ -144,9 +147,16 @@ function mSet_table1(mE) {
       mTxt.style.fontSize = "1.3vh";
       mTxt.style.color = "rgba(0,0,0, 1)";
       mTxt.innerText = mCurr_I1["0"];
-      mTxt.style.width = mCurr_I1["1"] != undefined ? mCurr_I1["1"] : w;
+      if (mCurr_I1["0"] !== "") {
+        mTxt.style.width = mCurr_I1["1"] != undefined ? mCurr_I1["1"] : w;
+      } else {
+        mTxt.style.width = "7.5vw";
+      }
+      if (mCurr_I1["0"] === "Item Code") {
+        mTxt.style.paddingLeft = "5px";
+      }
       mTxt.style.textAlign = "center";
-      mTxt.style.marginLeft = "4vw";
+      mTxt.style.marginLeft = "2vw";
       mHead.appendChild(mTxt);
     }
 
@@ -158,7 +168,7 @@ function mSet_table1(mE) {
       mSet_txt1(mCurr_I1);
     }
   }
-  mHead1(mTbl_div, mRndr.l, "10vw");
+  mHead1(mTbl_div, mRndr.l, "12vw");
 
   //row..
   function mRow1(mRow, mData) {
@@ -175,7 +185,12 @@ function mSet_table1(mE) {
     mRow.style.display = "flex";
     mRow.style.alignItems = "center";
     mRow.style.justifyContent = "space-between";
-    mRow.style.margin = "6vh 0 0 0";
+    mRow.style.margin = "2vh 0 0 0";
+    mRow.style.marginLeft = "4vh";
+    mRow.style.width = "120vw";
+    mRow.style.overflowX = "scroll";
+    mRow.style.overflow = "hidden";
+
     mTbl_div.appendChild(mRow);
     mRow1(mRow, mCurr_I1);
   }
