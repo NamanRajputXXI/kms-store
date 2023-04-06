@@ -12,7 +12,7 @@ function mSet_table1(mE) {
         var mTxt = document.createElement("div");
         mTxt.style.fontSize = "1.5vh";
         mTxt.style.width = "12vw";
-        mTxt.style.textAlign = "center"
+        mTxt.style.textAlign = "center";
         mTxt.style.color = "rgba(34,34,34, 1)";
         mTxt.innerHTML = txt;
         return mTxt;
@@ -35,7 +35,7 @@ function mSet_table1(mE) {
         mLink.innerHTML = link;
         mLink.style.fontSize = "1.5vh";
         mLink.style.width = "12vw";
-        mLink.style.textAlign = "center"
+        mLink.style.textAlign = "center";
         mLink.style.color = "rgba(14,80,235, 1)";
         mLink.style.textDecoration = "underline";
         mLink.style.cursor = "pointer";
@@ -152,8 +152,8 @@ function mSet_table1(mE) {
       } else {
         mTxt.style.width = "7.5vw";
       }
-      if( mCurr_I1['0']==="Item Code"){
-        mTxt.style.paddingLeft = "5px"
+      if (mCurr_I1["0"] === "Item Code") {
+        mTxt.style.paddingLeft = "5px";
       }
       mTxt.style.textAlign = "center";
       mTxt.style.marginLeft = "2vw";
@@ -189,6 +189,8 @@ function mSet_table1(mE) {
     mRow.style.marginLeft = "4vh";
     mRow.style.width = "120vw";
     mRow.style.overflowX = "scroll";
+    mRow.style.overflow = "hidden";
+
     mTbl_div.appendChild(mRow);
     mRow1(mRow, mCurr_I1);
   }
