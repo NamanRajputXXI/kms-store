@@ -150,7 +150,10 @@ function mSet_table1(mE) {
       if (mCurr_I1["0"] !== "") {
         mTxt.style.width = mCurr_I1["1"] != undefined ? mCurr_I1["1"] : w;
       } else {
-        mTxt.style.width = "7vw";
+        mTxt.style.width = "7.5vw";
+      }
+      if( mCurr_I1['0']==="Item Code"){
+        mTxt.style.paddingLeft = "5px"
       }
       mTxt.style.textAlign = "center";
       mTxt.style.marginLeft = "2vw";
